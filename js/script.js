@@ -17,6 +17,8 @@ searchBtn.addEventListener("click", () => {
         console.log(myMeal.strMeal);
         console.log(myMeal.strArea);
         console.log(myMeal.strInstructions);
+        console.log(myMeal.idMeal);
+        console.log(myMeal.strCategory);
         let count = 1;
         let ingredients = [];
         for (let i in myMeal) {
@@ -34,8 +36,9 @@ searchBtn.addEventListener("click", () => {
         result.innerHTML = `
     <img src=${myMeal.strMealThumb}>
     <div class="details">
-        <h2>${myMeal.strMeal}</h2>
-        <h4>${myMeal.strArea}</h4>
+        <h1>${myMeal.strMeal}</h1>
+        <h3>${myMeal.strArea}</h3>
+        <h5>${myMeal.strCategory}</h5>
     </div>
     <div id="ingredient-con"></div>
     <div id="recipe">
